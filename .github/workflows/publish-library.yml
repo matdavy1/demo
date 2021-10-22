@@ -22,5 +22,6 @@ jobs:
       - name: Publish package
         run: gradle publish
         env:
+          VERSION: ${{ env.INPUT_VERSION ]}
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
